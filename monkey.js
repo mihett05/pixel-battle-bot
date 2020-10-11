@@ -5,8 +5,8 @@
 // @include  https://vk.com/*
 // ==/UserScript==
 
-
-document.querySelector('body').innerHTML += `
+const head = document.querySelector('head');
+head.innerHTML = `
 <script src="https://raw.githubusercontent.com/mihett05/pixel-battle-bot/master/image.js"></script>
 <script src="https://raw.githubusercontent.com/mihett05/pixel-battle-bot/master/bot.js"></script>
-`;
+` + head.innerHTML;
