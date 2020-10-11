@@ -36,8 +36,11 @@ const convert = async () => {
       }
     }
   }
-  const repr = dataToDraw.map(v => `[${v.join(',')}],`).join('\n');
-  fs.writeFileSync('../image.json', `[${repr}]`);
+  const data = {
+    start: startCoord,
+    img: dataToDraw
+  };
+  fs.writeFileSync('../image.json', JSON.stringify(data));
 }
 convert();
 
