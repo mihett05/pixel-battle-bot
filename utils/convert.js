@@ -37,7 +37,7 @@ const convert = async () => {
     }
   }
   const repr = dataToDraw.map(v => `[${v.join(',')}],`).join('\n');
-  fs.writeFileSync('../image.js', `var window._rustbot_image_data = [${repr}]`);
+  fs.writeFileSync('../image.json', `[${repr}]`);
 }
 convert();
 
