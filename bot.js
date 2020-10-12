@@ -210,10 +210,14 @@ async function onOpen() {
       console.log('iter');
       pixelHandler();
       console.log('sleep');
-      setTimeout(() => {
-      	loadMap();
-      }, 30000);
-      await Data.sleep(60200);
+      
+      const startTime = (new Date()).getTime();
+      await loadMap();
+      const diffTime = (new Date()).getTime() - startTime;
+
+      if (diffTime < 60200) {
+      	await Data.sleep(60200 - diffTime);
+      }
     }
   } else {
     setTimeout(() => {
