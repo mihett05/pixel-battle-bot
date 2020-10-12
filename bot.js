@@ -175,7 +175,7 @@ async function loadMap() {
 
 
 async function loadImage() {
-  const req = await fetch('https://raw.githubusercontent.com/mihett05/pixel-battle-bot/master/image.json');
+  const req = await fetch(`https://raw.githubusercontent.com/mihett05/pixel-battle-bot/master/image.json?time=${(new Date()).getTime()}`);
   const data = await req.json();
   Data.start = data.start;
   Data.image = data.img;
