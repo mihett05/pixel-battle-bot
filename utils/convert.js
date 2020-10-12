@@ -4,8 +4,8 @@ const { decode_colors, colors } = require('./colors');
 
 
 const startCoord = {
-	x: process.argv[3] || 154,
-	y: process.argv[4] || 137
+	x: process.argv[3] || 304,
+	y: process.argv[4] || 145
 }
 
 const convert = async () => {
